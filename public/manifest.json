@@ -1,0 +1,64 @@
+{
+  "name": "AuthEmpire — 2FA Security Authenticator",
+  "short_name": "AuthEmpire",
+  "description": "Advanced personal 2FA Authenticator with biometric verification, live OTP codes, and 24/7 security monitoring.",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["security", "utilities", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Open Dashboard",
+      "short_name": "Dashboard",
+      "description": "View your OTP codes",
+      "url": "/dashboard",
+      "icons": [{ "src": "/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Security Monitor",
+      "short_name": "Security",
+      "description": "View security status",
+      "url": "/security",
+      "icons": [{ "src": "/logo.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "protocol_handlers": [
+    {
+      "protocol": "otpauth",
+      "url": "/add-account?url=%s"
+    }
+  ],
+  "file_handlers": [],
+  "share_target": {
+    "action": "/add-account",
+    "method": "GET",
+    "params": {
+      "url": "url"
+    }
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
